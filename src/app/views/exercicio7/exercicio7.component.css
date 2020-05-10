@@ -1,0 +1,30 @@
+div {
+    width: 200px;
+    height: 200px;
+    font-size: 36px;
+    border: 2px solid #000;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: blue;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 2px;
+  }
+  
+  button:hover {
+      background: rgba(0, 0, 255, 0.7);
+  }
+
+  .divVisivel {
+      display: block;
+  }
+
+  .divInvisivel {
+      display: none;
+  }
+  

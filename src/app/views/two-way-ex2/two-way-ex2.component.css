@@ -1,0 +1,12 @@
+.cachorro {
+  width: 200px;
+  display: block;
+}
+
+.visivel {
+  display: block;
+}
+
+.invisivel {
+  display: none;
+}
