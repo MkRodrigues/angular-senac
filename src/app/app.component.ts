@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'appaula6';
+  componenteAtual = 'exselect';
+
+  exibirComponenente(nome: string): void {
+    this.componenteAtual = nome;
+  }
 }

@@ -1,0 +1,11 @@
+img {
+  max-width: 250px;
+  margin: 2px;
+  display: block;
+  cursor: pointer;
+}
+
+ul li {
+  list-style: none;
+  float: left;
+}

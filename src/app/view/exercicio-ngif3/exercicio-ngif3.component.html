@@ -1,0 +1,19 @@
+<!-- Crie um select que permita selecionar o tipo de contato preferencial do usuário (Whatsapp ou email). Cada tipo de contato deverá exibir um campo de texto específico, que permita ao usuário digitar seu valor adequadamente -->
+
+<h2>NgIf - Exercício 3</h2>
+
+<select name="" id="" [(ngModel)]="contato">
+    <option value="wpp">WhatsApp</option>
+    <option value="email">E-mail</option>
+</select>
+
+
+<div class="" *ngIf="contato === 'email'">
+    <label for="">E-mail</label>
+    <input type="email" name="" id="">
+</div>
+
+<div class="" *ngIf="contato === 'wpp'">
+    <label for="">WhatsApp</label>
+    <input type="number" name="" id="">
+</div>

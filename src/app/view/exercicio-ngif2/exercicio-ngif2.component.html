@@ -1,0 +1,10 @@
+<!-- Modifique o exercício anterior para que sejam exibidas as frases “número positivo”, “número negativo” ou “zero” abaixo da caixa de texto, de acordo com as entradas do usuário  -->
+
+<h2>NgIf - Exercício 2</h2>
+
+<label for="num">Insira um número: </label>
+<input type="number" name="" id="num" [(ngModel)]="numero">
+
+<p *ngIf="numero > 0">Número Positivo</p>
+<p *ngIf="numero < 0">Número Negativo</p>
+<p *ngIf="numero === 0">Número Zero</p>

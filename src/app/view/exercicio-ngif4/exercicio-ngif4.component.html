@@ -1,0 +1,21 @@
+<!-- Crie uma calculadora, utilizando dois campos de texto e 4 botões (+, -, * e /). Quando clicados, os botões deverão realizar as operações matemáticas adequadas e exibir o resultado em texto, na parte inferior. Apenas exiba os botões e o resultado se houver números válidos nos campos de texto -->
+
+<h2>NgIf - Exercício 4</h2>
+
+
+<input type="number" placeholder="Insira o número 1" [(ngModel)]="n1">
+<br><br>
+<input type="number" placeholder="Insira o número 2" [(ngModel)]="n2">
+<br><br>
+
+<div class="" *ngIf="n1 && n2">
+    <button (click)="somar()">+</button>
+    <button (click)="subtrair()">-</button>
+    <button (click)="multiplicar()">*</button>
+    <button (click)="dividir()">/</button>
+
+    <br><br>
+
+    <label for="#">Resultado</label>
+    <input type="number" [(ngModel)]="resultado">
+</div>

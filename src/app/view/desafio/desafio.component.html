@@ -1,0 +1,29 @@
+<!-- Crie 3 caixas de texto e 4 Rádio Buttons contendo as operações básicas (soma, subtração, divisão, multiplicação). Quando valores númericos forem digitados nas caixas de texto, a operação selecionada via rádio button deverá ser realizada e o resultado deverá ser exibido na 3ª caixa. -->
+
+<h2>Desafio</h2>
+<label for="n1">Número 1</label><br>
+<input id="n1" type="number" [(ngModel)]="n1">
+<br>
+<br>
+
+<input type="radio" name="" value="soma" id="soma" [(ngModel)]="operacoes">
+<label for="soma">Somar</label>
+
+<input type="radio" name="" value="subtracao" id="sub" [(ngModel)]="operacoes">
+<label for="sub">Subtração</label>
+
+<input type="radio" name="" value="multiplicacao" id="mult" [(ngModel)]="operacoes">
+<label for="mult">Multiplicação</label>
+
+<input type="radio" name="" value="divisao" id="div" [(ngModel)]="operacoes">
+<label for="div">Divisão</label>
+<br>
+<br>
+
+<label for="n2">Número 2</label><br>
+<input id="n2" type="number" [(ngModel)]="n2">
+<br>
+<br>
+
+<label for="resultado">Resultado</label><br>
+<input id="resultado" type="texto" value="{{opMatematica(n1, n2)}}">

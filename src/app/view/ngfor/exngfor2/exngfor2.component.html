@@ -1,0 +1,13 @@
+<p>NgFor - Exemplo 2</p>
+
+<table border="1">
+    <tr>
+        <th>Nome do Filme</th>
+        <th>Nota do Filme</th>
+    </tr>
+
+    <tr *ngFor="let nomeFilme of arrayNomeFilme; let i = index">
+        <td>{{nomeFilme}}</td>
+        <td>{{arrayNotaFilme[i]}}</td>
+    </tr>
+</table>

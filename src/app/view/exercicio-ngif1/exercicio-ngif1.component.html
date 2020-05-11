@@ -1,0 +1,8 @@
+<!-- Crie uma caixa de texto para entrada de números. Quando um número positivo for digitado, exiba a frase “número positivo” abaixo da caixa de texto -->
+
+<h2>NgIf - Exercício 1</h2>
+
+<label for="num">Insira um número: </label>
+<input type="number" name="" id="num" [(ngModel)]="numero">
+
+<p *ngIf="numero > 0">Número Positivo</p>

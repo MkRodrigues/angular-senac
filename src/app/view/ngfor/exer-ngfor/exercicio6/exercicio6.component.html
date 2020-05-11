@@ -1,0 +1,9 @@
+<!-- Crie um array contendo 4 países do mundo.Mostre o array em formato de lista na página. Quando um país for clicado, mostre um alert contendo sua capital -->
+
+<h2>Ngfor - Exercício 6</h2>
+
+<ul>
+    <li *ngFor="let pais of arrayPaisesMundo, let i = index" (click)="mostrarCapitais(arrayCapitais[i])">
+        {{pais}}
+    </li>
+</ul>

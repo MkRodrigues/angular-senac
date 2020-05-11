@@ -1,0 +1,9 @@
+<!-- Itere por um vetor contendo um array de nomes de imagens, exibindo cada imagem de forma sequencial. Quando clicada, uma imagem deve exibir seu nome num alerta -->
+
+<h2>NgFor - Exercício 5</h2>
+
+<ul>
+    <li *ngFor="let imagem of arrayNomeImgs">
+        <img src="assets/{{imagem}}.jpg" (click)="mostrarNome(imagem)" alt="">
+    </li>
+</ul>

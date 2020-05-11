@@ -1,0 +1,8 @@
+<!-- Crie o template de uma div contendo o título do post e seu conteúdo. Faça um array de títulos e um array de posts contendo 3 elementos cada. Faça com que os posts e títulos sejam exibidos na tela -->
+
+<h2>NgFor - Exercício 7</h2>
+
+<div class="post" *ngFor="let titulo of arrayTitulos; let i = index">
+    <h1>{{titulo}}</h1>
+    <p>{{arrayPosts[i]}}</p>
+</div>
