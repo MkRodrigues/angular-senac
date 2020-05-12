@@ -1,0 +1,12 @@
+h3 {
+  font-family: 'Lucida Sans', sans-serif;
+  font-weight: Bold;
+  font-size: 25px;
+}
+
+span {
+  font-family: 'Lucida Sans', sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 18px;
+}

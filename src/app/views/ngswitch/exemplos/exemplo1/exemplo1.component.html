@@ -1,0 +1,11 @@
+<h2>NgSwitch - Exemplo 1</h2>
+
+<input type="text" [(ngModel)]="paisagem">
+
+<div class="" [ngSwitch]="paisagem">
+    <img *ngSwitchCase="'imagem1'" src="assets/imagem1.jpg" alt="">
+    <img *ngSwitchCase="'imagem2'" src="assets/imagem2.jpg" alt="">
+    <img *ngSwitchCase="'imagem3'" src="assets/imagem3.jpg" alt="">
+    <img *ngSwitchCase="'imagem4'" src="assets/imagem4.jpg" alt="">
+    <img *ngSwitchDefault src="assets/error.png" alt="">
+</div>

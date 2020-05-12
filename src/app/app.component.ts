@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'appaula7';
+
+  exemplo1: string;
+  menu: string;
+
+  abrirComponente(componente: string): void {
+    this.menu = componente;
+  }
+
 }

@@ -1,0 +1,20 @@
+<!-- Crie uma lista contendo canais do YouTube. Permita que o usuário pesquise o canal do canal numa caixa de texto. Se o canal estiver disponível, exiba apenas o nome do canal seguido de um link para acessá-lo -->
+
+<h2>NgSwitch - Exercício 1</h2>
+
+
+<ul>
+    <li *ngFor="let canal of listaCanais">
+        {{canal}}
+    </li>
+</ul>
+
+<label for="#">Digite o nome de um Canal:</label>
+<input type="text" [(ngModel)]="canais">
+
+
+<div [ngSwitch]="canais">
+    <a *ngSwitchCase="'Doma Arquitetura'" href="https://www.youtube.com/channel/UCQbdsX9AVd8sF35p8825NcQ" target="_blank">Doma Arquitetura</a>
+    <a *ngSwitchCase="'Curso em Vídeo'" href="https://www.youtube.com/user/cursosemvideo" target="_blank">Curso em Vídeo</a>
+    <a *ngSwitchCase="'Design Course'" href="https://www.youtube.com/user/DesignCourse" target="_blank">Design Course</a>
+</div>
