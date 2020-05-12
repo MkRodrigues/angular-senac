@@ -1,0 +1,19 @@
+<h1>Meus Filmes</h1>
+
+<ul>
+    <li *ngFor="let movie of arrayMovies; let i = index">
+        <span (click)="selectMovie(movie);">Filme: {{movie.name}} |Nota: {{movie.rating}}</span>
+        <button (click)="removeMovie(i);">x</button>
+    </li>
+</ul>
+
+<div class="" *ngIf="selectedMovie">
+    <input type="text" [(ngModel)]="selectedMovie.name" placeholder="Insira o nome do filme">
+    <br>
+    <input type="number" [(ngModel)]="selectedMovie.rating" placeholder="Insira uma nota">
+    <button (click)="addMovie()">Salvar</button>
+    <!-- Outra forma de tratar inserção vazia de dados -->
+    <!-- [disabled]="!selectedMovie.name && !selectedMovie.rating" -->
+</div>
+
+<button (click)="newMovie();">Novo</button>
