@@ -10,6 +10,8 @@ import { Movie } from 'src/app/model/movie';
 export class MovieComponent implements OnInit {
 
   arrayMovies = new Array<Movie>();
+  selectedMovie: Movie = null;
+  isAddingNewMovie = false;
 
   constructor() {
     const filme1 = new Movie();
@@ -35,6 +37,38 @@ export class MovieComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Métodos
 
+  selectMovie(movie: Movie): void {
+    this.selectedMovie = movie;
+    this.isAddingNewMovie = false;
+  }
+  // Para testar se funciona, jogar o cod abaixo na funcao acima
+  // alert(this.selectedMovie.name);
+
+  newMovie() {
+    this.selectedMovie = new Movie();
+    this.isAddingNewMovie = true;
+  }
+
+  addMovie() {
+    if (this.selectedMovie.name !== '' && !isNaN(this.selectedMovie.rating)) {
+
+      if (this.isAddingNewMovie) {
+        this.arrayMovies.push(this.selectedMovie);
+      }
+
+      this.selectedMovie = null;
+
+    } else {
+      alert('Alerta! Por favor insira um Nome de Filme e uma Nota para prosseguir!');
+    }
+  }
+
+  removeMovie(posicao: number) {
+    if (confirm('O item será excluído')) {
+      this.arrayMovies.splice(posicao, 1);
+    }
+  }
 
 }
