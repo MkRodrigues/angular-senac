@@ -1,0 +1,62 @@
+<div class="container">
+    <h1 class="text-center py-5 display-4">Meus Jogos</h1>
+
+    <div class="row">
+        <div class="col-md">
+            <div class="card bg-light">
+                <div class="card-header">Lista de Jogos</div>
+                <div class=" card-body p-4">
+                    <ul>
+                        <li class=" py-4" *ngFor="let game of games" (click)="selectGame(game)">
+                            <span class="lead">
+                                <p>Nome Jogo: {{game.name}}</p>
+                                <p>Gênero: {{game.genre}}</p>
+                                <p>Plataforma: {{game.platform}}</p>
+                                <p>Status: {{game.status}}</p>
+                                <button class="btn btn-danger" (click)="remove(game.id);">Excluir</button>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <div class=" card bg-light p-4" *ngIf="slctGame">
+
+                <div class="form-group">
+                    <label for="">Nome do Jogo</label>
+                    <input class="form-control" type="text" [(ngModel)]="slctGame.name">
+                </div>
+                <!-- Teste -->
+                <div class="form-group">
+                    <label for="">Gênero</label>
+                    <input class="form-control" type="text" [(ngModel)]="slctGame.genre">
+                </div>
+                <!-- Fim de Teste -->
+
+                <div class="form-group"><label for="">Gênero</label>
+                    <select [compareWith]="equals" class="form-control" [(ngModel)]="slctGame.genre">
+                        <option *ngFor="let genre of genres" [ngValue]="genre">{{genre.name}}</option>
+                    </select></div>
+
+                <div class="form-group">
+                    <label for="">Plataforma</label>
+                    <input class="form-control" type="text" [(ngModel)]="slctGame.platform">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Status</label>
+                    <input class="form-control" type="text" [(ngModel)]="slctGame.status">
+                </div>
+                <div class="">
+                    <button (click)="save();" class="btn btn-success float-left">Salvar</button>
+                    <button (click)="cancel();" class="btn btn-danger float-right">Cancelar</button>
+                </div>
+            </div>
+            <div class="py-2">
+                <button (click)="newGame()" class="btn btn-primary">Novo Jogo</button>
+            </div>
+        </div>
+    </div>
+</div>

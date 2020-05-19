@@ -1,0 +1,45 @@
+<h1 class="display-4 text-center py-5">Gêneros</h1>
+
+
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md">
+            <div class="card bg-light">
+                <div class="card-header">Lista de Gêneros</div>
+                <div class="card-body">
+                    <ul>
+                        <li class=" lead py-2" *ngFor="let genre of genres" (click)="selectGenre(genre)">
+                            {{genre.name}}
+                            <button class="btn btn-danger float-right" (click)="remove(genre.id);">Excluir</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <div class="card bg-light p-4" *ngIf="slctGenre">
+
+                <div class="form-group">
+                    <label for="">Novo gênero: </label>
+                    <input class="form-control" type="text" [(ngModel)]="slctGenre.name">
+                </div>
+
+                <div>
+                    <button (click)="save();" class="btn btn-success float-left">Salvar</button>
+                    <button (click)="cancel();" class="btn btn-danger float-right">Cancelar</button>
+                </div>
+            </div>
+
+            <div class="py-2">
+                <button class="btn btn-primary" (click)="newGenre()">Novo Gênero</button>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
