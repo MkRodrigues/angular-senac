@@ -1,0 +1,61 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Game</title>
+</head>
+
+<div class="container">
+    <h1 class="text-center py-5 display-4">Meus Jogos</h1>
+
+    <div class="row">
+        <div class="col-md">
+            <div class="card bg-light">
+                <div class="card-header">Lista de Jogos</div>
+                <div class=" card-body p-4">
+                    <ul>
+                        <li *ngFor="let game of games" (click)="selectGame(game)">
+                            <span class="lead">
+                                <p>Nome Jogo: {{game.name}}</p>
+                                <p>Status: {{game.status}}</p>
+                            </span>
+                            <button class="btn btn-danger" (click)="remove(game.id);">Excluir</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <div class=" card bg-light p-4" *ngIf="slctGame">
+
+                <div class="form-group">
+                    <label for="">Nome do Jogo</label>
+                    <input class="form-control" type="text" [(ngModel)]="slctGame.name">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Gênero</label>
+                    <input class="form-control" type="text" [(ngModel)]="slctGame.genre">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Plataforma</label>
+                    <input class="form-control" type="text" [(ngModel)]="slctGame.platform">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Status</label>
+                    <input class="form-control" type="text" [(ngModel)]="slctGame.status">
+                </div>
+                <div class="">
+                    <button (click)="save();" class="btn btn-success float-left">Salvar</button>
+                    <button (click)="cancel();" class="btn btn-danger float-right">Cancelar</button>
+                </div>
+            </div>
+            <div class="py-2">
+                <button (click)="newGame()" class="btn btn-primary">Novo Jogo</button>
+            </div>
+        </div>
+    </div>
+</div>
