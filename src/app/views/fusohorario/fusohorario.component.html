@@ -1,0 +1,23 @@
+<h2>Consulta de Fuso Horário</h2>
+
+<input type="text" placeholder="Fuso Horário" [(ngModel)]="fusohorario">
+<button (click)="consultarFusohorario()">Consultar Fuso Horário</button>
+
+
+<div class="" *ngIf="fusoh">
+    <p>Abreviação: {{fusoh.abbreviation}}</p>
+    <p>Cliente IP: {{fusoh.client_ip}}</p>
+    <p>Data: {{fusoh.datetime}}</p>
+    <p>Dia da Semana: {{fusoh.day_of_week}}</p>
+    <p>Dia do Ano: {{fusoh.day_of_year}}</p>
+    <p>Dst: {{fusoh.dst}}</p>
+    <p>Dst de: {{fusoh.dst_from}}</p>
+    <p>Dst Deslocamento: {{fusoh.dst_offset}}</p>
+    <p>Dst Até: {{fusoh.dst_until}}</p>
+    <p>Deslocamento: {{fusoh.raw_offset}}</p>
+    <p>Fuso Horário: {{fusoh.timezone}}</p>
+    <p>UnixTime: {{fusoh.unixtime}}</p>
+    <p>Utc Fuso Horário: {{fusoh.utc_datetime}}</p>
+    <p>Utc Deslocamento: {{fusoh.utc_offset}}</p>
+    <p>Número da Semana: {{fusoh.week_number}}</p>
+</div>
