@@ -1,0 +1,35 @@
+<div class="container">
+    <h2 class="text-center display-4 my-5">Plataformas</h2>
+    <div class="row">
+        <div class="col-md">
+            <div class="card bg-light">
+                <div class="card-header">Lista de Plataformas</div>
+                <div class="card-body">
+                    <ul>
+                        <li class="text-secondary list-inline-item" *ngFor=" let plataforma of vPlataforma">
+                            {{plataforma.nome}}
+                            <button class="btn btn-danger float-right" (click)="removerPlataforma(plataforma.id)"></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <div class="card bg-light">
+                <div class="card-header">Plataformas</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="">Nome da Plataforma</label>
+                        <input class="form-control" type="text" [(ngModel)]="slctPlataforma.nome">
+                    </div>
+                    <div class="">
+                        <button class="btn btn-success float-left" (click)="salvarPlataforma();">Salvar Plataforma</button>
+                        <button class="btn btn-danger float-right" (click)="cancelar();">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary my-2" (click)="novaPlataforma();">Nova Plataforma</button>
+        </div>
+    </div>
+</div>
